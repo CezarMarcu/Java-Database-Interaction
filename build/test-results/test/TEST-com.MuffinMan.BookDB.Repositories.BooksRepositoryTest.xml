@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.MuffinMan.BookDB.Repositories.BooksRepositoryTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-02-11T19:20:15" hostname="DESKTOP-5J6FSUK" time="0.671">
+  <properties/>
+  <testcase name="canSaveBookFromInput()" classname="com.MuffinMan.BookDB.Repositories.BooksRepositoryTest" time="0.671"/>
+  <system-out><![CDATA[Book title:
+Author:
+Edit:
+Language:
+Pages:
+Paperback:
+Year of Publication:
+Dimensions:
+Records affected: 1
+
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
