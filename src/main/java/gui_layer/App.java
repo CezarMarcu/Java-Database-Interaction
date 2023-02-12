@@ -2,8 +2,6 @@ package gui_layer;
 
 import bussines_layer.BussinesLogic;
 import models_layer.Book;
-
-
 import java.sql.SQLException;
 import java.util.Scanner;
 

@@ -2,86 +2,94 @@ package models_layer;
 
 public class Book {
 
-    private Long _id;
-    private final String _title;
-    private final String _author;
-    private final String _edit;
-    private final String _language;
-    private final String _pages;
-    private final String _paperback;
-    private final String _publicationYear;
-    private String _IBSN;
-    private final String _dimensions;
+    private final String title;
+    private final String author;
+    private final String edit;
+    private final String language;
+    private final String pages;
+    private final String paperback;
+    private final String publicationYear;
+    private final String dimensions;
+    private Long id;
+    private String IBSN;
 
 
     public Book(String _title, String _author, String _edit, String _language, String _pages, String _paperback, String _publicationYear, String _dimensions) {
-        this._title = _title;
-        this._author = _author;
-        this._edit = _edit;
-        this._language = _language;
-        this._pages = _pages;
-        this._paperback = _paperback;
-        this._publicationYear = _publicationYear;
-        this._dimensions = _dimensions;
-        GenerateIBSN();
+        this.title = _title;
+        this.author = _author;
+        this.edit = _edit;
+        this.language = _language;
+        this.pages = _pages;
+        this.paperback = _paperback;
+        this.publicationYear = _publicationYear;
+        this.dimensions = _dimensions;
+        generateIBSN();
     }
 
 
-    public void set_id(Long _id) {
-        this._id = _id;
+    public void setId(Long id) {
+        this.id = id;
     }
-    public String get_title() {
-        return _title;
+
+    public String getTitle() {
+        return title;
     }
-    public String get_author() {
-        return _author;
+
+    public String getAuthor() {
+        return author;
     }
-    public String get_edit() {
-        return _edit;
+
+    public String getEdit() {
+        return edit;
     }
-    public String get_language() {
-        return _language;
+
+    public String getLanguage() {
+        return language;
     }
-    public String get_pages() {
-        return _pages;
+
+    public String getPages() {
+        return pages;
     }
-    public String get_paperback() {
-        return _paperback;
+
+    public String getPaperback() {
+        return paperback;
     }
-    public String get_publicationYear() {
-        return _publicationYear;
+
+    public String getPublicationYear() {
+        return publicationYear;
     }
-    public String get_IBSN() {
-        return _IBSN;
+
+    public String getIBSN() {
+        return IBSN;
     }
-    public String get_dimensions() {
-        return _dimensions;
+
+    public String getDimensions() {
+        return dimensions;
     }
-    private void GenerateIBSN(){
+
+    private void generateIBSN() {
         String numericString = "0123456789";
         int n = 10;
         StringBuilder sb = new StringBuilder(n);
         for (int i = 0; i < n; i++) {
-            int index = (int)(numericString.length() * Math.random());
+            int index = (int) (numericString.length() * Math.random());
             sb.append(numericString.charAt(index));
         }
-        this._IBSN = sb.toString();
+        this.IBSN = sb.toString();
     }
 
     @Override
     public String toString() {
-        return "Book{" +
-                "_id=" + _id + "\n" +
-                ", _title='" + _title + "\n" +
-                ", _author='" + _author + "\n" +
-                ", _edit='" + _edit + "\n" +
-                ", _language='" + _language + "\n" +
-                ", _pages='" + _pages + "\n" +
-                ", _paperback='" + _paperback + "\n" +
-                ", _publicationYear='" + _publicationYear + "\n" +
-                ", _IBSN='" + _IBSN + "\n" +
-                ", _dimensions='" + _dimensions + "\n" +
-                '}';
+        return "Book{" + "Id:" + id + "\n" +
+                ", Title:'" + title + "\n" +
+                ", author:'" + author + "\n" +
+                ", Edit:'" + edit + "\n" +
+                ", Language:'" + language + "\n" +
+                ", Pages:'" + pages + "\n" +
+                ", Paperback:'" + paperback + "\n" +
+                ", PublicationYear:'" + publicationYear + "\n" +
+                ", IBSN:'" + IBSN + "\n" +
+                ", Dimensions:'" + dimensions + "\n" + '}';
     }
 
 }
