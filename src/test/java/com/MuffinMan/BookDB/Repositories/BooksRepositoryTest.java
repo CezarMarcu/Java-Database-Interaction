@@ -15,7 +15,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class BooksRepositoryTest {
 
     private Connection connection;
-    private final Scanner scanner= new Scanner(System.in);
 
     @BeforeEach
     void setUp() throws SQLException {
@@ -34,7 +33,20 @@ public class BooksRepositoryTest {
         Book book1 = new Book("Game of Thrones","George R.R. Martin", "Nemira","English","804","Brosata","2018","20x20x20");
         repo.saveBook(book1);
     }
-
+    @Test
+    public void canGetBooks(){
+        BookRepository repo = new BookRepository(connection);
+        List<Book> books = repo.getBooks();
+        for(Book item : books){
+            System.out.println(item);
+        }
+    }
+    @Test
+    public void canDeleteNoTitleBook(){
+        BookRepository repo = new BookRepository(connection);
+        repo.deleteNullTitleBook();
+        System.out.println("Book deleted with success");
+    }
 }
 
 

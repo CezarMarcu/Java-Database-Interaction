@@ -26,6 +26,18 @@ public class Book {
         generateIBSN();
     }
 
+    public Book(Long id, String _title, String _author, String _edit, String _language, String _pages, String _paperback, String _publicationYear,String IBSN, String _dimensions) {
+        this.id = id;
+        this.title = _title;
+        this.author = _author;
+        this.edit = _edit;
+        this.language = _language;
+        this.pages = _pages;
+        this.paperback = _paperback;
+        this.publicationYear = _publicationYear;
+        this.IBSN = IBSN;
+        this.dimensions = _dimensions;
+    }
 
     public void setId(Long id) {
         this.id = id;
@@ -80,16 +92,16 @@ public class Book {
 
     @Override
     public String toString() {
-        return "Book{" + "Id:" + id + "\n" +
-                ", Title:'" + title + "\n" +
-                ", author:'" + author + "\n" +
-                ", Edit:'" + edit + "\n" +
-                ", Language:'" + language + "\n" +
-                ", Pages:'" + pages + "\n" +
-                ", Paperback:'" + paperback + "\n" +
-                ", PublicationYear:'" + publicationYear + "\n" +
-                ", IBSN:'" + IBSN + "\n" +
-                ", Dimensions:'" + dimensions + "\n" + '}';
+        return "Book{" + "Id:" + id +
+                ", Title:'" + title +
+                ", author:'" + author +
+                ", Edit:'" + edit  +
+                ", Language:'" + language +
+                ", Pages:'" + pages +
+                ", Paperback:'" + paperback +
+                ", PublicationYear:'" + publicationYear +
+                ", IBSN:'" + IBSN +
+                ", Dimensions:'" + dimensions + '}';
     }
 
 }
